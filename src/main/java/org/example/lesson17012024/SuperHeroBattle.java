@@ -17,5 +17,10 @@ public class SuperHeroBattle {
         System.out.println(superhero1);
         System.out.println(superhero2);
         System.out.println(superhero3);
+
+        Protection randomProtection = Protection.generateRandomProtection();
+
+        System.out.println(randomProtection);
+
     }
 }

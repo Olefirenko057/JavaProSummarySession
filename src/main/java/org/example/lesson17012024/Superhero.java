@@ -15,6 +15,7 @@ public class Superhero {
         this.protection = protection;
     }
 
+
     public void fight(Superhero opponent) {
         System.out.println(this.name + " is fighting against " + opponent.getName());
 
