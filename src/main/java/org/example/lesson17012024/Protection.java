@@ -8,7 +8,7 @@ public class Protection {
     private static Protection[] availableProtection;
 
     static {
-        Protection protection1 = new Protection("Hat", 0);
+        Protection protection1 = new Protection("Hat", 1);
         Protection protection2 = new Protection("Jacket", 10);
         Protection protection3 = new Protection("Helmet", 15);
         Protection protection4 = new Protection("Shield", 30);

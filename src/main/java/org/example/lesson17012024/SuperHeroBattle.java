@@ -10,18 +10,39 @@ public class SuperHeroBattle {
 //        Protection protection2 = new Protection("Bulletproof vest", 10);
 //        Protection protection3 = new Protection("Armor", 20);
 
-//        Superhero superhero1 = new Superhero("Hamster", 100);
-           Superhero.generateFightersAndStartFight();
-//        Superhero superhero2 = new Superhero("Predator",100,weapon1,protection2);
-//        Superhero superhero3 = new Superhero("Lion",100,weapon3,protection3);
+         Superhero steve = new Superhero("Steve", 70);
+         Superhero leo = new Superhero("Leo",55);
 
-//        System.out.println(superhero1);
-//        System.out.println(superhero2);
-//        System.out.println(superhero3);
+         System.out.println("Before the fight:");
+         System.out.println(steve);
+         System.out.println(leo);
 
-//        Protection randomProtection = Protection.generateRandomProtection();
-//
-//        System.out.println(randomProtection);
+         System.out.println();
+
+         steve.fight(leo);
+
+         System.out.println();
+
+         System.out.println("After the fight:");
+         System.out.println(steve);
+         System.out.println(leo);
+
+         System.out.println();
+
+
+         Superhero randomFighter = Superhero.generateRandomFighter();
+         System.out.println("Before the fight");
+         System.out.println(steve);
+         System.out.println(randomFighter);
+
+         System.out.println();
+
+         steve.fight(randomFighter);
+
+         System.out.println("After the fight");
+         System.out.println(steve);
+         System.out.println(randomFighter);
+
 
     }
 }
