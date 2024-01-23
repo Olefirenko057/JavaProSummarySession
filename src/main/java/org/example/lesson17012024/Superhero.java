@@ -29,7 +29,7 @@ public class Superhero {
         } else if(myForce > opponentForce) {
             System.out.println(this.name + " has won the fight");
             System.out.println(this.name + " force - " + myForce + " : " + opponent.name + " force - " + opponentForce);
-            opponent.setHealth(opponent.health - (myForce - opponentForce) / opponent.protection.getLevel());
+            opponent.health = opponent.health - (myForce - opponentForce) / opponent.protection.getLevel();
         } else {
             System.out.println("There is a draw");
         }
@@ -38,6 +38,19 @@ public class Superhero {
          String[] names = new String[]{"Robot","Ninja","Zombie","Mummy","Boxer","Spider-man","Batman"};
          Random random = new Random();
          return new Superhero(names[random.nextInt(names.length)],random.nextInt(100));
+    }
+    public Superhero generateOpponent(Superhero[] superheroes) {
+        Random random = new Random();
+        int index = random.nextInt(superheroes.length);
+        if(superheroes[index].name != this.name) {
+           return superheroes[index];
+        } else if(index != 0){
+            index -= 1;
+            return superheroes[index];
+        } else {
+            index += 1;
+            return superheroes[index];
+        }
     }
 
     public String getName() {
