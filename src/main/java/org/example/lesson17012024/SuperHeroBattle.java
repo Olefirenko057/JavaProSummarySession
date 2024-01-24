@@ -6,7 +6,7 @@ import java.util.Random;
 public class SuperHeroBattle {
     public static void main(String[] args) {
 
-         Superhero steve = new Superhero("Steve", 70);
+         Superhero steve = new Superhero("Steve","I am Steve", 70);
          Superhero leo = new Superhero("Leo",55);
          Superhero john = new Superhero("John",60);
          Superhero alex = new Superhero("Alex",65);
