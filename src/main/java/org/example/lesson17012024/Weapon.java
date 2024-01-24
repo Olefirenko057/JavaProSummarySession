@@ -23,7 +23,6 @@ public class Weapon {
         Random random = new Random();
         int r = random.nextInt(availableWeapons.length);
         return availableWeapons[r];
-
     }
 
     public String getName() {

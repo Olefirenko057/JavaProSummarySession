@@ -64,14 +64,13 @@ public class SuperHeroBattle {
         Superhero[] fightersToHeal = uniqueHeroes(allLostFighters);
         System.out.println(Arrays.toString(fightersToHeal));
 
-        Wizard wizard1 = new Wizard("Nel",5);
+        Wizard wizard1 = new Wizard("Nel",7);
         wizard1.introduce();
         wizard1.heal(fightersToHeal);
         System.out.println(Arrays.toString(fightersToHeal));
 
-
-
-
+        Wizard wizard2 = new Wizard("Evil","I can do magic",5);
+        wizard2.introduce();
     }
      public static Superhero generateOpponent(Superhero[] superheroes,Superhero superhero) {
           Random random = new Random();

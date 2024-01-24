@@ -1,18 +1,22 @@
 package org.example.lesson17012024;
 
-public class Wizard implements Introduceable {
-    private String name;
+public class Wizard extends Character{
     private int level;
 
-    public Wizard(String name, int level) {
-        this.name = name;
+    public Wizard(String name,int level) {
+        super(name);
         this.level = level;
     }
 
+    public Wizard(String name, String message,int level) {
+        super(name, message);
+        this.level = level;
+    }
+
+
     public void heal(Superhero hero) {
-        int maxHealth = 100;
-        if(hero.getHealth() < maxHealth) {
-            hero.setHealth(maxHealth - hero.getHealth() + hero.getHealth());
+        if(hero.getHealth() < 100) {
+            hero.setHealth(100);
             System.out.println(hero.getName() + " has been healed!");
         } else {
             System.out.println(hero.getName() + " doesn't need any treatment");
@@ -24,7 +28,9 @@ public class Wizard implements Introduceable {
         }
     }
     public void increaseForce(Superhero hero) {
-        hero.setForce(hero.getForce() + hero.getForce() * 0.1 * this.level);
+        double force = hero.getForce();
+        force = force + force * 0.1 * this.level;
+        hero.setForce(force);
     }
     public void increaseForce(Superhero[] superheroes) {
         for (Superhero superhero : superheroes) {
@@ -32,8 +38,4 @@ public class Wizard implements Introduceable {
         }
     }
 
-    @Override
-    public void introduce() {
-
-    }
 }

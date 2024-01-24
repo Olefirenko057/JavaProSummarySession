@@ -2,16 +2,23 @@ package org.example.lesson17012024;
 
 import java.util.Random;
 
-public class Superhero implements Introduceable {
-    private String name;
+public class Superhero extends Character {
     private double health;
     private double force;
     private Weapon weapon;
     private Protection protection;
     private static Superhero[] superheroes;
 
-    public Superhero(String name, int force) {
-        this.name = name;
+    public Superhero(String name,double force) {
+        super(name);
+        this.health = 100;
+        this.force = force;
+        this.weapon = Weapon.generateRandomWeapon();
+        this.protection = Protection.generateRandomProtection();
+
+    }
+    public Superhero(String name, String message, double force) {
+        super(name, message);
         this.health = 100;
         this.force = force;
         this.weapon = Weapon.generateRandomWeapon();
@@ -19,16 +26,16 @@ public class Superhero implements Introduceable {
     }
 
     public void fight(Superhero opponent) {
-        System.out.println(name + " is fighting against " + opponent.getName());
+        System.out.println(this.getName() + " is fighting against " + opponent.getName());
         double myForce = this.force + this.weapon.getForce();
         double opponentForce = opponent.force + opponent.weapon.getForce();
         if(myForce < opponentForce) {
-            System.out.println(opponent.name + " has won the fight");
-            System.out.println(opponent.name + " force - " + opponentForce + " : " + this.name + " force - " + myForce);
+            System.out.println(opponent.getName() + " has won the fight");
+            System.out.println(opponent.getName() + " force - " + opponentForce + " : " + this.getName() + " force - " + myForce);
             this.health = this.health - (opponentForce - myForce) / this.protection.getLevel();
         } else if(myForce > opponentForce) {
-            System.out.println(this.name + " has won the fight");
-            System.out.println(this.name + " force - " + myForce + " : " + opponent.name + " force - " + opponentForce);
+            System.out.println(this.getName() + " has won the fight");
+            System.out.println(this.getName() + " force - " + myForce + " : " + opponent.getName() + " force - " + opponentForce);
             opponent.health = opponent.health - (myForce - opponentForce) / opponent.protection.getLevel();
         } else {
             System.out.println("There is a draw");
@@ -39,10 +46,6 @@ public class Superhero implements Introduceable {
          String[] names = new String[]{"Robot","Ninja","Zombie","Mummy","Boxer","Spider-man","Batman"};
          Random random = new Random();
          return new Superhero(names[random.nextInt(names.length)],random.nextInt(100));
-    }
-
-    public String getName() {
-        return name;
     }
 
     public double getHealth() {
@@ -61,9 +64,6 @@ public class Superhero implements Introduceable {
         return protection;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public void setHealth(double health) {
         this.health = health;
@@ -85,7 +85,7 @@ public class Superhero implements Introduceable {
     @Override
     public String toString() {
         return "Superhero{" +
-                "name='" + name + '\'' +
+                "name='" + this.getName() + '\'' +
                 ", health=" + health +
                 ", force=" + force +
                 ", weapon=" + weapon +
@@ -93,8 +93,4 @@ public class Superhero implements Introduceable {
                 '}';
     }
 
-    @Override
-    public void introduce() {
-        System.out.println("Hi, I'm " + this.name + "!");
-    }
 }
