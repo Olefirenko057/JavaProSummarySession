@@ -2,10 +2,10 @@ package org.example.lesson17012024;
 
 import java.util.Random;
 
-public class Superhero {
+public class Superhero implements Introduceable {
     private String name;
-    private int health;
-    private int force;
+    private double health;
+    private double force;
     private Weapon weapon;
     private Protection protection;
     private static Superhero[] superheroes;
@@ -20,8 +20,8 @@ public class Superhero {
 
     public void fight(Superhero opponent) {
         System.out.println(name + " is fighting against " + opponent.getName());
-        int myForce = this.force + this.weapon.getForce();
-        int opponentForce = opponent.force + opponent.weapon.getForce();
+        double myForce = this.force + this.weapon.getForce();
+        double opponentForce = opponent.force + opponent.weapon.getForce();
         if(myForce < opponentForce) {
             System.out.println(opponent.name + " has won the fight");
             System.out.println(opponent.name + " force - " + opponentForce + " : " + this.name + " force - " + myForce);
@@ -34,34 +34,22 @@ public class Superhero {
             System.out.println("There is a draw");
         }
     }
+
     public static Superhero generateRandomFighter() {
          String[] names = new String[]{"Robot","Ninja","Zombie","Mummy","Boxer","Spider-man","Batman"};
          Random random = new Random();
          return new Superhero(names[random.nextInt(names.length)],random.nextInt(100));
-    }
-    public Superhero generateOpponent(Superhero[] superheroes) {
-        Random random = new Random();
-        int index = random.nextInt(superheroes.length);
-        if(superheroes[index].name != this.name) {
-           return superheroes[index];
-        } else if(index != 0){
-            index -= 1;
-            return superheroes[index];
-        } else {
-            index += 1;
-            return superheroes[index];
-        }
     }
 
     public String getName() {
         return name;
     }
 
-    public int getHealth() {
+    public double getHealth() {
         return health;
     }
 
-    public int getForce() {
+    public double getForce() {
         return force;
     }
 
@@ -77,11 +65,11 @@ public class Superhero {
         this.name = name;
     }
 
-    public void setHealth(int health) {
+    public void setHealth(double health) {
         this.health = health;
     }
 
-    public void setForce(int force) {
+    public void setForce(double force) {
         if(force < 0) throw new RuntimeException("Force can't be less than 0");
         this.force = force;
     }
@@ -103,5 +91,10 @@ public class Superhero {
                 ", weapon=" + weapon +
                 ", protection=" + protection +
                 '}';
+    }
+
+    @Override
+    public void introduce() {
+        System.out.println("Hi, I'm " + this.name + "!");
     }
 }

@@ -9,10 +9,10 @@ public class Protection {
 
     static {
         Protection protection1 = new Protection("Hat", 1);
-        Protection protection2 = new Protection("Jacket", 10);
-        Protection protection3 = new Protection("Helmet", 15);
-        Protection protection4 = new Protection("Shield", 30);
-        Protection protection5 = new Protection("Bulletproof", 10);
+        Protection protection2 = new Protection("Jacket", 2);
+        Protection protection3 = new Protection("Helmet", 3);
+        Protection protection4 = new Protection("Shield", 5);
+        Protection protection5 = new Protection("Bulletproof", 4);
         availableProtection = new Protection[]{protection1,protection2,protection3,protection4,protection5};
 
     }
