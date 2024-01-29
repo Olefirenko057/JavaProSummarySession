@@ -14,7 +14,7 @@ public abstract class Character {
         this.message = message;
     }
 
-    public  void introduce() {
+    public void introduce() {
         System.out.println(message);
     };
 
