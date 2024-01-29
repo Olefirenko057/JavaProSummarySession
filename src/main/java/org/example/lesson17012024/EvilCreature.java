@@ -1,90 +1,31 @@
 package org.example.lesson17012024;
 
-public class EvilCreature {
-    private String name;
+public class EvilCreature extends CombatCharacter {
+    private int protectionLevel;
     private double force;
-    private Protection protection;
     private boolean isAngry;
-    private double health;
 
-    public EvilCreature(String name,double force, boolean isAngry) {
-        this.name = name;
+    public EvilCreature(String name, int protectionLevel, double force, boolean isAngry) {
+        super(name);
+        this.protectionLevel = protectionLevel;
         this.force = force;
-        this.protection = Protection.generateRandomProtection();
         this.isAngry = isAngry;
-        this.health = 100;
     }
 
-    public void fight(Superhero superheroOpponent) {
-        double evilForce = this.force;
-        double superHeroForce = superheroOpponent.countForce() + superheroOpponent.getWeapon().getForce();
-        double updatedHealth;
-        if (isAngry) {
-            evilForce *= 2;
-            if (evilForce > superHeroForce) {
-                System.out.println(this.name + " has won");
-                updatedHealth = superheroOpponent.getHealth() - (evilForce - superHeroForce) / superheroOpponent.countProtectionLevel();
-                superheroOpponent.setHealth(updatedHealth / 2);
-            } else if (evilForce < superHeroForce) {
-                System.out.println(superheroOpponent.getName() + " has won the Evil Creature!!!!");
-                updatedHealth = this.health - (superHeroForce - evilForce) / this.protection.getLevel();
-                this.health = updatedHealth;
-            } else {
-                System.out.println("There is a draw");
-            }
-        } else {
-            if (evilForce > superHeroForce) {
-                System.out.println(this.name + " has won");
-                updatedHealth = superheroOpponent.getHealth() - (evilForce - superHeroForce) / superheroOpponent.countProtectionLevel();
-                superheroOpponent.setHealth(updatedHealth);
-            } else if (evilForce < superHeroForce) {
-                System.out.println(superheroOpponent.getName() + " has won the Evil Creature!!!!");
-                updatedHealth = this.health - (superHeroForce - evilForce) / this.protection.getLevel();
-                this.health = updatedHealth;
-            } else {
-                System.out.println("There is a draw");
-            }
-        }
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getForce() {
-        return force;
-    }
-
-    public void setForce(double force) {
+    public EvilCreature(String name, String message, int protectionLevel, double force, boolean isAngry) {
+        super(name, message);
+        this.protectionLevel = protectionLevel;
         this.force = force;
+        this.isAngry = isAngry;
     }
 
-    public Protection getProtection() {
-        return protection;
+    @Override
+    public double countForce() {
+        return (isAngry) ? (force * 2) : force ;
     }
 
-    public void setProtection(Protection protection) {
-        this.protection = protection;
+    @Override
+    public int countProtectionLevel() {
+        return protectionLevel;
     }
-
-    public boolean isAngry() {
-        return isAngry;
-    }
-
-    public void setAngry(boolean angry) {
-        isAngry = angry;
-    }
-
-    public double getHealth() {
-        return health;
-    }
-
-    public void setHealth(double health) {
-        this.health = health;
-    }
-
 }

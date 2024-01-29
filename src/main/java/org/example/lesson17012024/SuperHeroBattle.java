@@ -72,8 +72,10 @@ public class SuperHeroBattle {
         Wizard wizard2 = new Wizard("Evil","I can do magic",5);
         wizard2.introduce();
 
-        EvilCreature killer = new EvilCreature("killer",80,true);
-        killer.fight(john);
+        Mag mag = new Mag("MagBest",80,75,true,2);
+        mag.curse(john);
+
+
     }
      public static Superhero generateOpponent(Superhero[] superheroes,Superhero superhero) {
           Random random = new Random();

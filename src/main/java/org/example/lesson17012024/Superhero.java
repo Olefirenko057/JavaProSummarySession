@@ -6,7 +6,6 @@ public class Superhero extends CombatCharacter {
     private double force;
     private Weapon weapon;
     private Protection protection;
-//    private static Superhero[] superheroes;
 
     public Superhero(String name,double force) {
         super(name);

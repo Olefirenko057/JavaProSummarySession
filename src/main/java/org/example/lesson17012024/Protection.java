@@ -42,7 +42,6 @@ public class Protection {
         Random random = new Random();
         int r = random.nextInt(availableProtection.length);
         return availableProtection[r];
-
     }
 
     @Override

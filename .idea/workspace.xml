@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="db63a744-9c9a-46db-9f34-1ef3412601d1" name="Changes" comment="Commit changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lesson17012024/EvilCreature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lesson17012024/EvilCreature.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lesson17012024/SuperHeroBattle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lesson17012024/SuperHeroBattle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lesson17012024/Superhero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lesson17012024/Superhero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lesson17012024/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lesson17012024/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lesson17012024/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lesson17012024/Wizard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,16 +20,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -55,16 +57,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="SuperHeroBattle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.lesson17012024.SuperHeroBattle" />
-      <module name="JavaProSummarySession" />
+      <module name="JavaProPractice" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.lesson17012024.*" />
@@ -118,7 +120,70 @@
       <option name="project" value="LOCAL" />
       <updated>1705831868012</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Commit changes">
+      <created>1705857630730</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705857630730</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Commit changes">
+      <created>1705937836598</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1705937836598</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Commit changes">
+      <created>1705937922422</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1705937922422</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Commit changes">
+      <created>1706028362922</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1706028362922</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Commit changes">
+      <created>1706095152101</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1706095152101</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Commit changes">
+      <created>1706095168383</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1706095168383</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Commit changes">
+      <created>1706101036079</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1706101036079</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Commit changes">
+      <created>1706103299784</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1706103299784</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Commit changes">
+      <created>1706519631713</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1706519631713</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
